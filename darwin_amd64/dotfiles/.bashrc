@@ -8,5 +8,6 @@ source ./helpers/base.sh
 source ./helpers/git.sh
 source ./helpers/terraform.sh
 source ./helpers/homebrew.sh
+source ./helpers/vscode.sh
 
 cd ${CURR_DIR}

@@ -10,6 +10,7 @@ cd ${WORKING_DIR}
 ./scripts/install_utils.sh
 ./scripts/install_git.sh
 ./scripts/install_chtf.sh
+./scripts/install_vscode.sh
 
 # Sync ~/.bashrc to my bashrc file
 ./scripts/sync.sh
