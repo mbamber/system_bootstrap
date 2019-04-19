@@ -39,3 +39,37 @@ else
   rm -r "${DOWNLOAD_AS}"
 fi
 echo "Done!"
+
+# Intall VSCode Extensions
+echo "Installing VSCode extensions..."
+INSTALLED_EXT=$(code --list-extensions)
+
+declare -a EXT_LIST=(
+  # Languages
+  "ms-vscode.go" # Golang
+  "redhat.java" # Java
+  "mauve.terraform" # Terraform
+  "ms-python.python" # Python
+
+  # Tools
+  "eamodio.gitlens" # Git
+  "ms-vsliveshare.vsliveshare" # Live Sharing
+  "yzhang.markdown-all-in-one" # Markdown
+  "vscjava.vscode-maven" # Maven
+  "rpinski.shebang-snippets" # Shebang
+)
+
+for ext in "${EXT_LIST[@]}";
+do
+  IS_INSTALLED=$(echo ${INSTALLED_EXT} | grep -q -i "${ext}")
+  if [[ $? -eq 0 ]];
+  then
+    echo "  Extension ${ext} already installed. Skipping..."
+  else
+    echo "  Installing Extension ${ext}"
+    code --install-extension "${ext}" > /dev/null 2>&1
+  fi
+  echo "  Done!"
+done
+
+echo "Done!"
