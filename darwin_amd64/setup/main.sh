@@ -11,6 +11,7 @@ cd ${WORKING_DIR}
 ./scripts/install_git.sh
 ./scripts/install_chtf.sh
 ./scripts/install_vscode.sh
+./scripts/install_docker.sh
 
 # Sync ~/.bashrc to my bashrc file
 ./scripts/sync.sh
