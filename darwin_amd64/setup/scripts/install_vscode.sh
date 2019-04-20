@@ -57,6 +57,9 @@ declare -a EXT_LIST=(
   "yzhang.markdown-all-in-one" # Markdown
   "vscjava.vscode-maven" # Maven
   "rpinski.shebang-snippets" # Shebang
+
+  # Keybinds
+  "ms-vscode.atom-keybindings" # Atom keybinds
 )
 
 for ext in "${EXT_LIST[@]}";
@@ -72,4 +75,12 @@ do
   echo "  Done!"
 done
 
+echo "Done!"
+
+echo "Copying VSCode keybindings..."
+cp -f "./config/vscode_keybindings.json" "${HOME}/Library/Application Support/Code/User/keybindings.json"
+echo "Done!"
+
+echo "Copying VSCode settings..."
+cp -f "./config/vscode_settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
 echo "Done!"
