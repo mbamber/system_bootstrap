@@ -16,3 +16,6 @@ if [[ -f /usr/local/share/chtf/chtf.sh ]]; then
     source "/usr/local/share/chtf/chtf.sh"
 fi
 alias tfv="chtf"
+
+# Set default Terraform version
+tfv 0.11.8
