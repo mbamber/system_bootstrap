@@ -1,4 +1,8 @@
-#!/usr/bin/env bash
+#! /usr/bin/env zsh
+
+# Prepare for completion
+autoload -U compinit && compinit
+zmodload -i zsh/complist
 
 # Alias some basic commands
 echo "Adding basic aliases..."

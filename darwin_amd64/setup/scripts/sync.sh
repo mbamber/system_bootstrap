@@ -1,8 +1,9 @@
-#!/usr/bin/env bash
+#! /usr/bin/env zsh
 
-SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
+FILE_PATH="$0:A"
+SCRIPT_PATH=$(dirname "${FILE_PATH}")
 
-# Create a symlink in ~ to my bashrc file
-echo "Syncing bashrc files..."
-ln -s -f "${SCRIPT_PATH}"/../../dotfiles/.bashrc ~/.bashrc
+# Create a symlink in ~ to our zshrc file
+echo "Syncing zshrc files..."
+ln -s -f "${SCRIPT_PATH}"/../../dotfiles/.zshrc ~/.zshrc
 echo "Done!"

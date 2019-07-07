@@ -1,13 +1,6 @@
-#!/usr/bin/env bash
+#! /usr/bin/env zsh
 
 # Source all completion scripts provided by homebrew
 if type brew &>/dev/null; then
-  for COMPLETION in $(brew --prefix)/etc/bash_completion.d/*
-  do
-    [[ -f $COMPLETION ]] && source "$COMPLETION"
-  done
-  if [[ -f $(brew --prefix)/etc/profile.d/bash_completion.sh ]];
-  then
-    source "$(brew --prefix)/etc/profile.d/bash_completion.sh"
-  fi
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi

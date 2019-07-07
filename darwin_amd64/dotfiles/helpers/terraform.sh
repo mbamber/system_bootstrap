@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#! /usr/bin/env zsh
 
 echo "Adding terraform aliases..."
 
@@ -18,4 +18,4 @@ fi
 alias tfv="chtf"
 
 # Set default Terraform version
-tfv 0.11.8
+tfv 0.12.2

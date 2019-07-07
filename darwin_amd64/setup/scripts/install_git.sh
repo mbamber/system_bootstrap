@@ -1,5 +1,7 @@
+#! /usr/bin/env zsh
+
 # Git Completion
-which -s wget
+/usr/bin/which -s wget
 if [[ $? != 0 ]];
 then
   echo "[ERROR] wget not available. Cannot install git completion."
@@ -7,19 +9,19 @@ then
 fi
 
 # Git completion
-OUT_PATH="../target/git_completion.bash"
+OUT_PATH="../target/git_completion.zsh"
 if [[ -f ${OUT_PATH} ]];
 then
   echo "Git completition already installed. Skipping..."
 else
   echo "Installing git completion..."
   mkdir -p ./target > /dev/null 2>&1
-  wget -O "${OUT_PATH}" https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > /dev/null 2>&1
+  wget -O "${OUT_PATH}" https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh > /dev/null 2>&1
 fi
 echo "Done!"
 
 # Emojify
-which -s emojify
+/usr/bin/which -s emojify
 if [[ $? == 0 ]];
 then
   echo "Emojify already installed. Skipping..."

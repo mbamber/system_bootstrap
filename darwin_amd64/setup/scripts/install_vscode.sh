@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#! /usr/bin/env zsh
 
 if [ -d "/Applications/Visual Studio Code.app/" ];
 then
@@ -6,14 +6,14 @@ then
 else
   echo "Installing VSCode..."
 
-  which -s wget
+  /usr/bin/which -s wget
   if [[ $? != 0 ]];
   then
     echo "[ERROR] wget not available. Cannot install vscode."
     exit 1
   fi
 
-  which -s unzip
+  /usr/bin/which -s unzip
   if [[ $? != 0 ]];
   then
     echo "[ERROR] unzip not available. Cannot install vscode."
@@ -53,10 +53,8 @@ declare -a EXT_LIST=(
 
   # Tools
   "eamodio.gitlens" # Git
-  "ms-vsliveshare.vsliveshare" # Live Sharing
   "yzhang.markdown-all-in-one" # Markdown
   "vscjava.vscode-maven" # Maven
-  "rpinski.shebang-snippets" # Shebang
 
   # Keybinds
   "ms-vscode.atom-keybindings" # Atom keybinds

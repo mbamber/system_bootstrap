@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#! /usr/bin/env zsh
 
 # Command line tools for XCode
 echo "Installing Command Line Tools for XCode..."
@@ -8,7 +8,7 @@ echo "Done"
 # Install Homebrew if it isn't already installed
 BREW_URL="https://raw.githubusercontent.com/Homebrew/install/master/install"
 
-which -s brew
+/usr/bin/which -s brew
 if [[ $? == 0 ]];
 then
   echo "Hombrew already installed. Skipping..."

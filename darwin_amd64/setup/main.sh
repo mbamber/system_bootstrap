@@ -1,9 +1,11 @@
-#!/usr/bin/env bash
+#! /usr/bin/env zsh
 
 CURR_DIR=$(pwd -P)
-WORKING_DIR=$(dirname ${BASH_SOURCE})
+FILE_PATH="$0:A"
+WORKING_DIR=$(dirname "${FILE_PATH}")
 
-cd ${WORKING_DIR}
+# Move to the scripts running directory
+cd "${WORKING_DIR}"
 
 # Perform all the required installs
 ./scripts/install_homebrew.sh
@@ -13,7 +15,10 @@ cd ${WORKING_DIR}
 ./scripts/install_vscode.sh
 ./scripts/install_docker.sh
 
-# Sync ~/.bashrc to my bashrc file
+./scripts/install_prompt.sh
+
+# Sync ~/.zshrc to our zshrc file
 ./scripts/sync.sh
 
-cd ${CURR_DIR}
+# Move back to where we started
+cd "${CURR_DIR}"

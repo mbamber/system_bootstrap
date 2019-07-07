@@ -1,6 +1,13 @@
-#!/usr/bin/env bash
+#! /usr/bin/env zsh
 
-which -s docker
+/usr/bin/which -s brew
+if [[ $? != 0 ]];
+then
+  echo "[ERROR] Homebrew not installed. Cannot install docker."
+  exit 1
+fi
+
+/usr/bin/which -s docker
 if [[ $? -eq 0 ]];
 then
     echo "Docker already installed. Skipping..."
