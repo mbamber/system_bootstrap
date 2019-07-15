@@ -14,6 +14,7 @@ cd "${WORKING_DIR}"
 ./scripts/install_chtf.sh
 ./scripts/install_vscode.sh
 ./scripts/install_docker.sh
+./scripts/install_aws.sh
 
 ./scripts/install_prompt.sh
 

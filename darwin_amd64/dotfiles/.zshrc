@@ -12,6 +12,7 @@ source ./helpers/completion.sh
 source ./helpers/git.sh
 source ./helpers/terraform.sh
 source ./helpers/homebrew.sh
+source ./helpers/aws.sh
 source ./helpers/vscode.sh
 
 cd "${CURR_DIR}"
