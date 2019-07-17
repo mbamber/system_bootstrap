@@ -4,6 +4,11 @@ CURR_DIR=$(pwd -P)
 FILE_PATH="$0:A"
 WORKING_DIR=$(dirname "${FILE_PATH}")
 
+if [[ $EUID -ne 0 ]]; then
+    echo "Script must be run as root!"
+    exit 1
+fi
+
 # Move to the scripts running directory
 cd "${WORKING_DIR}"
 
@@ -15,6 +20,7 @@ cd "${WORKING_DIR}"
 ./scripts/install_vscode.sh
 ./scripts/install_docker.sh
 ./scripts/install_aws.sh
+./scripts/install_go.sh
 
 ./scripts/install_prompt.sh
 

@@ -14,5 +14,6 @@ source ./helpers/terraform.sh
 source ./helpers/homebrew.sh
 source ./helpers/aws.sh
 source ./helpers/vscode.sh
+source ./helpers/go.sh
 
 cd "${CURR_DIR}"
