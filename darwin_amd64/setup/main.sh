@@ -15,6 +15,7 @@ cd "${WORKING_DIR}"
 # Perform all the required installs
 ./scripts/install_homebrew.sh
 ./scripts/install_utils.sh
+./scripts/install_python.sh
 ./scripts/install_git.sh
 ./scripts/install_chtf.sh
 ./scripts/install_vscode.sh
