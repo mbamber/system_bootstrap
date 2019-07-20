@@ -6,7 +6,7 @@ echo "Enabling AWS CLI autocompletion..."
 if [[ $? != 0 ]];
 then
   echo "[ERROR] AWS CLI not installed. Cannot configure autocompletion."
-  exit 1
+  return
 fi
 
 completer_path=$(dirname $(which aws_completer))
