@@ -24,6 +24,6 @@ then
     echo "Docker is already running..."
 else
     echo "Starting Docker..."
-    /Applications/Docker.app/Contents/MacOS/Docker &
+    sudo -u $(who am i | awk '{print $1}') zsh -c '/Applications/Docker.app/Contents/MacOS/Docker &'
     echo "Done!"
 fi
