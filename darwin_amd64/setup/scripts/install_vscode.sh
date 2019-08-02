@@ -55,6 +55,7 @@ declare -a EXT_LIST=(
   "eamodio.gitlens" # Git
   "yzhang.markdown-all-in-one" # Markdown
   "vscjava.vscode-maven" # Maven
+  "aleksandra.go-group-imports" # Go Import Formatter
 
   # Keybinds
   "ms-vscode.atom-keybindings" # Atom keybinds
