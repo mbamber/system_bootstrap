@@ -17,3 +17,18 @@ source ./helpers/vscode.sh
 source ./helpers/go.sh
 
 cd "${CURR_DIR}"
+
+# Source any machine specific configuration
+CUSTOM_SCRIPT_PATH="$HOME/.custom_dotfiles"
+if [[ -d "${CUSTOM_SCRIPT_PATH}" ]]
+then
+    cd "${CUSTOM_SCRIPT_PATH}"
+
+    for f in $(find ${CUSTOM_SCRIPT_PATH} -iname '*.sh' -exec basename {} \;)
+    do
+        echo "Sourcing custom file: $f"
+        source "$f"
+    done
+
+    cd "${CURR_DIR}"
+fi
