@@ -1,6 +1,6 @@
 #! /usr/bin/env zsh
 
-GO_VERSION="1.12.7"
+GO_VERSION="1.13.5"
 
 /usr/bin/which -s wget
 if [[ $? != 0 ]];
@@ -19,4 +19,8 @@ echo "Installing go at version $GO_VERSION..."
 wget -O ./target/go.tar.gz "https://dl.google.com/go/go$GO_VERSION.darwin-amd64.tar.gz" > /dev/null 2>&1
 tar -C /usr/local -xzf ./target/go.tar.gz
 chown -R $(logname) /usr/local/go
+
+ln -s /usr/local/go/bin/go /usr/local/bin/go
+ln -s /usr/local/go/bin/godoc /usr/local/bin/godoc
+ln -s /usr/local/go/bin/gofmt /usr/local/bin/gofmt
 echo "Done!"
