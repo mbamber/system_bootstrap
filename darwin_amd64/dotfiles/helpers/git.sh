@@ -2,7 +2,7 @@
 
 echo "Adding git aliases..."
 
-alias gl="git log --pretty=oneline --graph --decorate --color | emojify"
+alias gl="git log --pretty=oneline --graph --decorate --color | emojify | less -R"
 gt() {
     git fetch --prune
     gonebranches=$(git branch -v | grep '\[gone\]')
