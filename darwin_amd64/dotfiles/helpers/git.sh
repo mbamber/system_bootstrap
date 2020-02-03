@@ -13,3 +13,6 @@ gt() {
         git branch -D "$b"
     done
 }
+
+# Setup GPG key signing
+export GPG_TTY=$(tty)
