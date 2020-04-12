@@ -83,3 +83,9 @@ echo "Done!"
 echo "Copying VSCode settings..."
 cp -f "./config/vscode_settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
 echo "Done!"
+
+echo "Setting File Permissions..."
+user=$(logname)
+chown -R ${user} "${HOME}/Library/Application Support/Code"
+chown -R ${user} "${HOME}/.vscode"
+echo "Done!"
