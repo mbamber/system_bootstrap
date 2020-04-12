@@ -6,6 +6,9 @@ echo "Enabling autocompletion..."
 autoload -Uz compinit
 compinit
 
+autoload bashcompinit
+bashcompinit
+
 # Arrow key driven interface
 zstyle ':completion:*' menu select
 

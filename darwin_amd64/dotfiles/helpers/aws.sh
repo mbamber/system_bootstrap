@@ -16,5 +16,4 @@ then
 fi
 
 # Source completion
-completer_path=$(dirname $(which aws_completer))
-source "$completer_path/aws_zsh_completer.sh"
+complete -C $(which aws_completer) aws
