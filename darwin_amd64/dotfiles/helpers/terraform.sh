@@ -11,11 +11,16 @@ alias tfp="terraform plan"
 # Landscape
 alias tfl="terraform plan | landscape"
 
-# CHTF
-if [[ -f /usr/local/share/chtf/chtf.sh ]]; then
-    source "/usr/local/share/chtf/chtf.sh"
-fi
-alias tfv="chtf"
+# tfswitch
+load-tfswitch() {
+  local tfswitchrc_path="config.tf"
 
-# Set default Terraform version
-tfv 0.12.2
+  if [ -f "$tfswitchrc_path" ]; then
+    echo -e "\e[35m" # Turn the text magenta
+    tfswitch | grep "Switched terraform to"
+    echo -e "\e[39m" # Reset the text color
+  fi
+}
+add-zsh-hook chpwd load-tfswitch
+load-tfswitch
+alias tfv="tfswitch"

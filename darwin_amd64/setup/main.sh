@@ -9,6 +9,9 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
+# Figure out who called the script, in case we need to de-escalate our privileges
+export CALLER=$(who am i | awk '{print $1}')
+
 # Move to the scripts running directory
 cd "${WORKING_DIR}"
 
@@ -17,7 +20,7 @@ cd "${WORKING_DIR}"
 ./scripts/install_utils.sh
 ./scripts/install_python.sh
 ./scripts/install_git.sh
-./scripts/install_chtf.sh
+./scripts/install_tfswitch.sh
 ./scripts/install_vscode.sh
 ./scripts/install_docker.sh
 ./scripts/install_aws.sh
