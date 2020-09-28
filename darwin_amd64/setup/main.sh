@@ -25,6 +25,7 @@ cd "${WORKING_DIR}"
 ./scripts/install_docker.sh
 ./scripts/install_aws.sh
 ./scripts/install_go.sh
+./scripts/install_vim.sh
 
 ./scripts/install_prompt.sh
 

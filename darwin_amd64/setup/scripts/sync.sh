@@ -7,3 +7,7 @@ SCRIPT_PATH=$(dirname "${FILE_PATH}")
 echo "Syncing zshrc files..."
 ln -s -f "${SCRIPT_PATH}"/../../dotfiles/.zshrc ~/.zshrc
 echo "Done!"
+
+echo "Syncing other important files..."
+ln -s -f "${SCRIPT_PATH}"/../../dotfiles/.vimrc ~/.vimrc
+echo "Done!"
