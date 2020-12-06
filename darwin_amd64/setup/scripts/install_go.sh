@@ -1,6 +1,6 @@
 #! /usr/bin/env zsh
 
-GO_VERSION="1.13.5"
+GO_VERSION="1.15.6"
 
 /usr/bin/which -s wget
 if [[ $? != 0 ]];
