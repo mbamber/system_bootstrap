@@ -21,10 +21,7 @@ cd "${WORKING_DIR}"
 ./scripts/install_python.sh
 ./scripts/install_git.sh
 ./scripts/install_tfswitch.sh
-./scripts/install_vscode.sh
-./scripts/install_docker.sh
 ./scripts/install_aws.sh
-./scripts/install_go.sh
 ./scripts/install_vim.sh
 
 ./scripts/install_prompt.sh

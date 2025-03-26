@@ -12,21 +12,10 @@ fi
 OUT_PATH="../target/git_completion.zsh"
 if [[ -f ${OUT_PATH} ]];
 then
-  echo "Git completition already installed. Skipping..."
+  echo "Git completion already installed. Skipping..."
 else
   echo "Installing git completion..."
   mkdir -p ./target > /dev/null 2>&1
   wget -O "${OUT_PATH}" https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh > /dev/null 2>&1
-fi
-echo "Done!"
-
-# Emojify
-/usr/bin/which -s emojify
-if [[ $? == 0 ]];
-then
-  echo "Emojify already installed. Skipping..."
-else
-  echo "Installing emojify..."
-  brew install emojify > /dev/null 2>&1
 fi
 echo "Done!"
